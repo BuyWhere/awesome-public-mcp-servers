@@ -44,6 +44,7 @@ permissions, rate limits, and data-handling terms before connecting.
 
 | Provider / server | Connection details | Capabilities | Transport | Auth | Tags |
 | --- | --- | --- | --- | --- | --- |
+| AgentServices | [MCP details](https://agentservices.to) (`https://api.agentservices.to/mcp`) | x402-paid crypto and market data APIs — BTC indicators, DeFi stats, macro data, exchange analytics, 54 services, and 37 MCP tools | Streamable HTTP | No API key; x402 USDC payment for paid tools | `official` `market-data` `crypto` |
 | Stripe MCP Server | [MCP documentation](https://docs.stripe.com/mcp) (`https://mcp.stripe.com/`) | Payments, billing, products, customers, and Stripe documentation | Streamable HTTP | Stripe OAuth or restricted API key | `official` `payments` `billing` |
 
 ### Productivity
