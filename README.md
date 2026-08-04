@@ -36,29 +36,29 @@ permissions, rate limits, and data-handling terms before connecting.
 
 ### Developer Tools
 
-| Provider / server | Connection details | Capabilities | Transport | Auth | Tags |
-| --- | --- | --- | --- | --- | --- |
-| GitHub MCP Server | [Remote server setup](https://github.com/github/github-mcp-server/blob/main/docs/remote-server.md) (`https://api.githubcopilot.com/mcp/`) | Repositories, issues, pull requests, code search, and Actions | Streamable HTTP | GitHub OAuth or PAT | `official` `repositories` `issues` |
+| Provider / server | Connection details | Capabilities | Auth | Tags |
+| --- | --- | --- | --- | --- |
+| GitHub | [Remote server setup](https://github.com/github/github-mcp-server/blob/main/docs/remote-server.md) (`https://api.githubcopilot.com/mcp/`) | Repositories, issues, pull requests, code search, and Actions | GitHub OAuth or PAT | `official` `repositories` `issues` |
 
 ### Finance and Commerce
 
-| Provider / server | Connection details | Capabilities | Transport | Auth | Tags |
-| --- | --- | --- | --- | --- | --- |
-| AgentServices | [MCP details](https://agentservices.to) (`https://api.agentservices.to/mcp`) | x402-paid crypto and market data APIs — BTC indicators, DeFi stats, macro data, exchange analytics, 54 services, and 37 MCP tools | Streamable HTTP | No API key; x402 USDC payment for paid tools | `official` `market-data` `crypto` |
-| Stripe MCP Server | [MCP documentation](https://docs.stripe.com/mcp) (`https://mcp.stripe.com/`) | Payments, billing, products, customers, and Stripe documentation | Streamable HTTP | Stripe OAuth or restricted API key | `official` `payments` `billing` |
+| Provider / server | Connection details | Capabilities | Auth | Tags |
+| --- | --- | --- | --- | --- |
+| AgentServices | [MCP details](https://agentservices.to) (`https://api.agentservices.to/mcp`) | x402-paid crypto and market data APIs — BTC indicators, DeFi stats, macro data, exchange analytics, 54 services, and 37 MCP tools | No API key; x402 USDC payment for paid tools | `official` `market-data` `crypto` |
+| Stripe | [MCP documentation](https://docs.stripe.com/mcp) (`https://mcp.stripe.com/`) | Payments, billing, products, customers, and Stripe documentation | Stripe OAuth or restricted API key | `official` `payments` `billing` |
 
 ### Productivity
 
-| Provider / server | Connection details | Capabilities | Transport | Auth | Tags |
-| --- | --- | --- | --- | --- | --- |
-| Linear MCP Server | [MCP server guide](https://linear.app/docs/mcp) (`https://mcp.linear.app/mcp`) | Issues, projects, comments, and planning workflows | Streamable HTTP | Linear OAuth or API key | `official` `project-management` `issues` |
-| Notion MCP | [Connection guide](https://developers.notion.com/guides/mcp/get-started-with-mcp) (`https://mcp.notion.com/mcp`) | Workspace search, pages, and content management | Streamable HTTP | Notion account (OAuth) | `official` `knowledge-base` `documents` |
+| Provider / server | Connection details | Capabilities | Auth | Tags |
+| --- | --- | --- | --- | --- |
+| Linear | [MCP server guide](https://linear.app/docs/mcp) (`https://mcp.linear.app/mcp`) | Issues, projects, comments, and planning workflows | Linear OAuth or API key | `official` `project-management` `issues` |
+| Notion | [Connection guide](https://developers.notion.com/guides/mcp/get-started-with-mcp) (`https://mcp.notion.com/mcp`) | Workspace search, pages, and content management | Notion account (OAuth) | `official` `knowledge-base` `documents` |
 
 ### Design and Creative
 
-| Provider / server | Connection details | Capabilities | Transport | Auth | Tags |
-| --- | --- | --- | --- | --- | --- |
-| Figma MCP Server | [Remote server setup](https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/) (`https://mcp.figma.com/mcp`) | Design context, code generation, canvas editing, and FigJam | Streamable HTTP | Figma account (OAuth) | `official` `design` `figjam` |
+| Provider / server | Connection details | Capabilities | Auth | Tags |
+| --- | --- | --- | --- | --- |
+| Figma | [Remote server setup](https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/) (`https://mcp.figma.com/mcp`) | Design context, code generation, canvas editing, and FigJam | Figma account (OAuth) | `official` `design` `figjam` |
 
 ## Categories
 
@@ -82,10 +82,8 @@ complete. Add a new category only when an existing one is not a good fit.
 
 ## Legend
 
-**Transport** identifies how a client connects to the server, such as
-Streamable HTTP, SSE, or stdio. **Auth** identifies the credentials or account
-needed to use it; `none` should be used only when the server truly requires no
-authentication.
+**Auth** identifies the credentials or account needed to use a server; `none`
+should be used only when the server truly requires no authentication.
 
 The `official` tag means the provider publishes or maintains the linked
 server. Other tags should describe the server's primary capability, not serve

@@ -35,7 +35,8 @@ upstream service is free or anonymous.
 1. Choose the closest category.
 2. Add one table row in alphabetical order by server name or provider.
 3. Link to the official connection page or repository, not a copied listing.
-4. Record the transport and authentication requirement accurately.
+4. Record the authentication requirement accurately and link to documentation
+   that identifies the supported MCP transport.
 5. Add concise capability tags and use `official` only when the provider
    publishes or maintains the server.
 6. Check that every changed link works and that the Markdown table renders.
@@ -43,7 +44,7 @@ upstream service is free or anonymous.
 Use this row format:
 
 ```markdown
-| Provider / server | [Connection details](SERVER_URL) | Search, retrieval | Streamable HTTP | API key | `official` `research` |
+| Provider / server | [Connection details](SERVER_URL) | Search, retrieval | API key | `official` `research` |
 ```
 
 ## Pull Requests
