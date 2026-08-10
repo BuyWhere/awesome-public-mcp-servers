@@ -30,18 +30,29 @@ Created and maintained by [0mcp.io](https://0mcp.io).
 
 ## Servers
 
-These entries are hosted MCP servers published and maintained by the linked
-providers. Check each provider's documentation for plan requirements,
-permissions, rate limits, and data-handling terms before connecting.
+These entries are hosted or publicly installable MCP servers published and
+maintained by the linked providers. Check each provider's documentation for
+plan requirements, permissions, rate limits, and data-handling terms before
+connecting.
 
 ### Developer Tools
 
 | Provider / server | Connection details | Capabilities | Auth | Tags |
 | --- | --- | --- | --- | --- |
 | GitHub | [Remote server setup](https://github.com/github/github-mcp-server/blob/main/docs/remote-server.md) (`https://api.githubcopilot.com/mcp/`) | Repositories, issues, pull requests, code search, and Actions | GitHub OAuth or PAT | `official` `repositories` `issues` |
+| GitLab | [MCP server documentation](https://docs.gitlab.com/user/model_context_protocol/mcp_server/) (`https://gitlab.com/api/v4/mcp`, HTTP) | Project information, issues, merge requests, and GitLab API operations | GitLab OAuth 2.0 Dynamic Client Registration; group or instance enablement required; Beta | `official` `repositories` `issues` |
 | LaunchDarkly | [Hosted MCP server documentation](https://launchdarkly.com/docs/home/getting-started/mcp-hosted) (`https://mcp.launchdarkly.com/mcp/launchdarkly`) | Feature flags, AgentControl configs, observability logs, traces, errors, dashboards, and metrics | LaunchDarkly OAuth; hosted server excludes federal and EU environments | `official` `feature-flags` `observability` |
 | Postman | [Remote MCP server setup](https://learning.postman.com/latest-v-12/docs/reference/postman-api/postman-mcp-server/postman-mcp-remote-server) (`https://mcp.postman.com/mcp`) | Workspaces, collections, specifications, mocks, monitors, environments, and API workflows | Postman OAuth on the US remote server; API key required for the EU remote server | `official` `api-testing` `workspaces` |
 | Twilio | [MCP server documentation](https://www.twilio.com/docs/ai/mcp) (`https://mcp.twilio.com/docs`) | Search Twilio, SendGrid, and Segment API documentation and retrieve endpoint schemas across 1,800+ endpoints | None; public API specifications only | `official` `api-docs` `schemas` |
+
+### AI and LLM
+
+| Provider / server | Connection details | Capabilities | Auth | Tags |
+| --- | --- | --- | --- | --- |
+| Braintrust | [MCP documentation](https://www.braintrust.dev/docs/integrations/developer-tools/mcp) (US `https://api.braintrust.dev/mcp`; EU `https://api-eu.braintrust.dev/mcp`, Streamable HTTP) | Search documentation, inspect experiments, logs, datasets, and prompts, query data with SQL, summarize experiments, and generate permalinks | Braintrust OAuth 2.0 or API key; data-plane endpoint varies by region | `official` `evaluation` `observability` |
+| Hugging Face | [MCP server documentation](https://huggingface.co/docs/hub/en/agents-mcp) (`https://huggingface.co/mcp`, remote HTTP) | Search models, datasets, Spaces, papers, and documentation; run Jobs and sandboxes; use community Spaces tools | Hugging Face account; client-specific setup is generated in MCP settings | `official` `models` `datasets` |
+| LangSmith | [MCP server documentation](https://docs.langchain.com/langsmith/langsmith-mcp-server) (`https://langsmith-mcp-server.onrender.com/mcp`, HTTP) | Conversation history, prompts, traces and runs, projects, datasets, experiments, evaluations, and billing usage | LangSmith API key in the `LANGSMITH-API-KEY` header; workspace and endpoint headers are optional | `official` `evaluation` `tracing` |
+| Replicate | [MCP server documentation](https://replicate.com/docs/reference/mcp) (`https://mcp.replicate.com/sse`, SSE) | Discover and compare models, inspect model metadata, and create and manage predictions through Replicate's API | Replicate OAuth or API token | `official` `models` `inference` |
 
 ### Finance and Commerce
 
@@ -58,6 +69,7 @@ permissions, rate limits, and data-handling terms before connecting.
 | --- | --- | --- | --- | --- |
 | Asana | [MCP integration guide](https://developers.asana.com/docs/integrating-with-asanas-mcp-server) (`https://mcp.asana.com/v2/mcp`) | Work graph, tasks, projects, and planning workflows | Asana OAuth 2.0 (MCP app) | `official` `project-management` `tasks` |
 | Atlassian Rovo | [Rovo MCP overview](https://developer.atlassian.com/cloud/rovo-mcp/) (`https://mcp.atlassian.com/v1/mcp`) | Jira issues, Confluence pages, Compass components, Bitbucket, and cross-product search | Atlassian OAuth 2.1 or API token | `official` `jira` `confluence` |
+| ClickUp | [MCP server documentation](https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server) (`https://mcp.clickup.com/mcp`, HTTP) | Workspace tasks, Lists, Folders, Docs, comments, time tracking, and Chat workflows | ClickUp OAuth 2.1 with PKCE | `official` `project-management` `tasks` |
 | HubSpot | [MCP server documentation](https://developers.hubspot.com/ai-tools/mcp) (`https://mcp.hubspot.com`) | CRM objects, engagements, contacts, companies, deals, tickets, and commerce records | HubSpot OAuth 2.0 (user-level MCP app) | `official` `crm` `sales` |
 | Linear | [MCP server guide](https://linear.app/docs/mcp) (`https://mcp.linear.app/mcp`) | Issues, projects, comments, and planning workflows | Linear OAuth or API key | `official` `project-management` `issues` |
 | monday.com | [MCP integration guide](https://developer.monday.com/api-reference/docs/integrate-with-monday-mcp) (`https://mcp.monday.com/mcp`) | Boards, items, documents, and workflows through 60+ read/write tools | monday.com OAuth 2.0 or personal API token | `official` `project-management` `workflows` |
@@ -78,6 +90,7 @@ permissions, rate limits, and data-handling terms before connecting.
 
 | Provider / server | Connection details | Capabilities | Auth | Tags |
 | --- | --- | --- | --- | --- |
+| Browserbase | [MCP server setup](https://docs.browserbase.com/integrations/mcp/setup) (`https://mcp.browserbase.com/mcp`, Streamable HTTP) | Browser navigation, interaction, screenshots, extraction, and Stagehand agent workflows | Browserbase API key; custom models may require a separate model key | `official` `browser` `automation` |
 | Zapier | [MCP client guide](https://help.zapier.com/hc/en-us/articles/36265392843917-Use-Zapier-MCP-with-your-client) (`https://mcp.zapier.com/api/v1/connect`) | Connect AI clients to actions across Zapier's 9,000+ app ecosystem | Zapier connection token (Bearer) | `official` `automation` `workflows` |
 
 ### Communication
@@ -92,7 +105,11 @@ permissions, rate limits, and data-handling terms before connecting.
 | Provider / server | Connection details | Capabilities | Auth | Tags |
 | --- | --- | --- | --- | --- |
 | Airtable | [MCP server guide](https://support.airtable.com/v1/docs/using-the-airtable-mcp-server) (`https://mcp.airtable.com/mcp`) | Bases, tables, schemas, records, comments, and workspace data | Airtable OAuth or PAT | `official` `databases` `no-code` |
+| BigQuery | [Use the BigQuery MCP server](https://docs.cloud.google.com/bigquery/docs/use-bigquery-mcp) (`https://bigquery.googleapis.com/mcp`, Streamable HTTP) | List datasets and tables, inspect schemas, and run read-only or full SQL queries | Google Cloud OAuth; project IAM roles and BigQuery API enablement required | `official` `sql` `data-warehouse` |
+| MongoDB | [MCP server documentation](https://www.mongodb.com/docs/mcp-server/overview/) ([official source repository](https://github.com/mongodb-js/mongodb-mcp-server); `npx -y mongodb-mcp-server@latest --readOnly`, stdio) | Query and inspect databases and schemas; manage Atlas resources; use Performance Advisor and MongoDB knowledge search | MongoDB connection string or Atlas service-account credentials; read-only mode is recommended | `official` `mongodb` `database` |
 | Neon | [MCP server overview](https://neon.com/docs/ai/neon-mcp-server) (`https://mcp.neon.tech/mcp`) | Projects, branches, databases, SQL, schema changes, and branch-based migrations | Neon OAuth or API key for remote agents | `official` `postgres` `database` |
+| Pinecone | [MCP server documentation](https://docs.pinecone.io/guides/operations/mcp-server) (`npx -y @pinecone-database/mcp`, stdio) | Search Pinecone documentation, manage indexes, upsert records, query indexes, and rerank results | Pinecone API key | `official` `vector-search` `database` |
+| PostHog | [MCP documentation](https://posthog.com/docs/model-context-protocol) (`https://mcp.posthog.com/mcp`, Streamable HTTP) | Product analytics, HogQL, feature flags, experiments, session replay, error tracking, CDP, and support workflows | PostHog account authentication; US/EU data-region routing | `official` `analytics` `feature-flags` |
 | Snowflake | [Snowflake-managed MCP server documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp) (`https://<account_url>/api/v2/databases/<database>/schemas/<schema>/mcp-servers/<name>`) | Cortex Analyst, Cortex Search, Cortex Agents, custom tools, and governed SQL execution | Snowflake OAuth by default or External OAuth; account/database/schema/server setup required | `official` `data-warehouse` `analytics` |
 | Supabase | [MCP server documentation](https://supabase.com/docs/guides/ai-tools/mcp) (`https://mcp.supabase.com/mcp`) | Project-scoped database, docs, debugging, development, functions, branching, and storage tools | Supabase OAuth or PAT | `official` `database` `backend` |
 
@@ -116,7 +133,41 @@ permissions, rate limits, and data-handling terms before connecting.
 | --- | --- | --- | --- | --- |
 | Datadog | [MCP server documentation](https://docs.datadoghq.com/mcp_server/) (`https://mcp.datadoghq.com/v1/mcp`, US1) | APM, logs, metrics, monitors, dashboards, security signals, and observability workflows | Datadog OAuth 2.0, PAT/SAT, or API/application keys | `official` `observability` `monitoring` |
 | Grafana Cloud | [Cloud MCP server documentation](https://grafana.com/docs/grafana-cloud/ai-tools/mcp-servers/cloud-mcp/) (`https://mcp.grafana.com/mcp`) | Metrics, logs, dashboards, alerts, incidents, investigations, and other Grafana Cloud observability data | Grafana OAuth 2.1; Grafana Cloud role/permission and Assistant access required | `official` `observability` `metrics` |
+| New Relic | [MCP setup](https://docs.newrelic.com/docs/agentic-ai/mcp/setup/) (US `https://mcp.newrelic.com/mcp/`; EU `https://mcp.eu.newrelic.com/mcp/`, HTTP) | Observability discovery, NRQL/data access, alerting, incident response, performance analytics, and advanced analysis | New Relic OAuth or API key; region-specific endpoint; Preview | `official` `observability` `monitoring` |
 | Sentry | [MCP server documentation](https://mcp.sentry.dev/) (`https://mcp.sentry.dev/mcp`) | Error issues, events, traces, performance, projects, releases, and debugging workflows | Sentry OAuth | `official` `error-tracking` `observability` |
+
+### Maps and Location
+
+| Provider / server | Connection details | Capabilities | Auth | Tags |
+| --- | --- | --- | --- | --- |
+| Google Maps Grounding Lite | [MCP documentation](https://developers.google.com/maps/ai/grounding-lite) (`https://mapstools.googleapis.com/mcp`, Streamable HTTP) | Search places, look up current and forecast weather, and compute walking or driving route distance and duration | Google Maps API key or OAuth; Google Cloud project and billing setup required | `official` `maps` `routing` |
+| Mapbox | [MCP server documentation](https://docs.mapbox.com/api/guides/mcp-server/) (`https://mcp.mapbox.com/mcp`, Streamable HTTP) | Directions, isochrones, address and point-of-interest lookup, reverse geocoding, static maps, and geospatial resources | Mapbox OAuth for the hosted server or an access token for local deployment | `official` `geocoding` `navigation` |
+
+### Media and Content
+
+| Provider / server | Connection details | Capabilities | Auth | Tags |
+| --- | --- | --- | --- | --- |
+| ElevenLabs | [Official source repository](https://github.com/elevenlabs/elevenlabs-mcp) (`uvx elevenlabs-mcp`, stdio) | Text-to-speech, speech-to-text, voice cloning and design, sound effects, music, and voice agents | ElevenLabs API key | `official` `audio` `speech` |
+
+### Science and Computation
+
+| Provider / server | Connection details | Capabilities | Auth | Tags |
+| --- | --- | --- | --- | --- |
+| Wolfram Cloud MCP | [Remote MCP documentation](https://www.wolfram.com/artificial-intelligence/mcp/cloud/wolfram-mcp-cloud/) (`https://agenttools.wolfram.com/mcp`, Streamable HTTP) | Wolfram\|Alpha knowledge, Wolfram Language evaluation, and contextual computation and documentation tools | No API key required for Wolfram MCP Service; client/account access may apply | `official` `computation` `knowledge` |
+
+### Search and Research
+
+| Provider / server | Connection details | Capabilities | Auth | Tags |
+| --- | --- | --- | --- | --- |
+| AWS Knowledge | [MCP server documentation](https://awslabs.github.io/mcp/servers/aws-knowledge-mcp-server) (`https://knowledge-mcp.global.api.aws`, Streamable HTTP) | Search and read current AWS documentation, API references, troubleshooting and architecture guidance, What's New, CDK/CloudFormation, and agent skills | None; public service is rate-limited and does not require an AWS account | `official` `aws` `documentation` |
+| Brave Search | [Official source repository](https://github.com/brave/brave-search-mcp-server) (`npx -y @brave/brave-search-mcp-server`, stdio) | Web, local business, place, image, video, and news search, plus LLM context and AI summarization | Brave Search API key and plan; optional HTTP mode is unauthenticated by default and should be protected | `official` `web-search` `local-search` |
+| Context7 | [MCP client setup](https://context7.com/docs/resources/all-clients) (`https://mcp.context7.com/mcp`, Streamable HTTP) | Resolve libraries and retrieve current, version-specific documentation and code examples | Optional API key; OAuth or Bearer auth enables higher limits and private repositories | `official` `documentation` `libraries` |
+| Exa | [Web Search MCP documentation](https://exa.ai/docs/reference/exa-mcp) (`https://mcp.exa.ai/mcp`, Streamable HTTP) | Web and code search, full-page retrieval, advanced search, and multi-step research with Exa Agent | Exa OAuth or API key; free usage is available on the hosted service | `official` `web-search` `research` |
+| Firecrawl | [MCP server documentation](https://docs.firecrawl.dev/mcp) (`https://mcp.firecrawl.dev/{FIRECRAWL_API_KEY}/sse`, SSE) | Web search, scraping, crawling, content extraction, deep research, and batch scraping | Firecrawl API key | `official` `web-scraping` `extraction` |
+| Google Developer Knowledge | [MCP connection guide](https://developers.google.com/knowledge/mcp) (`https://developerknowledge.googleapis.com/mcp`, Streamable HTTP) | Search and retrieve official Google developer documentation, code samples, release notes, and grounded answers | Google Cloud OAuth or API key; project and service enablement required | `official` `documentation` `search` |
+| Microsoft Learn | [MCP server reference](https://learn.microsoft.com/en-us/training/support/mcp-developer-reference) (`https://learn.microsoft.com/api/mcp`, Streamable HTTP) | Search Microsoft Learn documentation, fetch pages, and find code samples | None for the public endpoint | `official` `documentation` `search` |
+| Perplexity | [MCP server documentation](https://docs.perplexity.ai/docs/getting-started/integrations/mcp-server) (`https://api.perplexity.ai/mcp`, Streamable HTTP) | Real-time web search, conversational answers, and advanced reasoning | Perplexity API key | `official` `web-search` `reasoning` |
+| Tavily | [MCP server documentation](https://docs.tavily.com/documentation/mcp) (`https://mcp.tavily.com/mcp`, Streamable HTTP) | Real-time web search, web-page extraction, and site mapping | Tavily OAuth or API key | `official` `web-search` `extraction` |
 
 ## Categories
 
@@ -137,6 +188,9 @@ complete. Add a new category only when an existing one is not a good fit.
 | Cloud and Infrastructure | Hosting, observability, deployment, and infrastructure |
 | Monitoring and Security | Security analysis, incident response, and operational tooling |
 | Design and Creative | Design systems, media, graphics, and content creation |
+| Maps and Location | Mapping, places, geocoding, routing, and geospatial context |
+| Media and Content | Audio, speech, voice, and other creative media |
+| Science and Computation | Mathematical computation, scientific knowledge, and symbolic tools |
 
 ## Legend
 
