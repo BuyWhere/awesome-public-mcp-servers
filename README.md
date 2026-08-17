@@ -91,6 +91,7 @@ connecting.
 
 | Provider / server | Connection details | Capabilities | Auth | Tags |
 | --- | --- | --- | --- | --- |
+| BuyWhere | [MCP server](https://www.npmjs.com/package/@buywhere/mcp-server) (`npx -y @buywhere/mcp-server`, stdio) | Cross-border product search and price comparison across 11M+ products in SG, SEA, and US markets; includes `search_products`, `find_best_price`, and `get_deals` tools | None (public catalog); API key for elevated rate limits | `community` `e-commerce` `shopping` `price-comparison` |
 | AgentServices | [MCP details](https://agentservices.to) (`https://api.agentservices.to/mcp`) | x402-paid crypto and market data APIs - BTC indicators, DeFi stats, macro data, exchange analytics, 54 services, and 37 MCP tools | No API key; x402 USDC payment for paid tools | `official` `market-data` `crypto` |
 | Klaviyo | [MCP server documentation](https://developers.klaviyo.com/en/docs/klaviyo_mcp_server) (`https://mcp.klaviyo.com/mcp`) | Campaigns, flows, performance reports, templates, and Klaviyo account data | Klaviyo OAuth; Owner, Admin, or Manager role required | `official` `marketing` `campaigns` |
 | PayPal | [MCP server announcement](https://developer.paypal.com/community/blog/paypal-model-context-protocol/) ([MCP portal](https://mcp.paypal.com)) | Create and manage invoices and invoice links; the official toolkit also supports orders, refunds, subscriptions, disputes, and tracking | PayPal developer credentials and access token; production use requires a PayPal Business account | `official` `payments` `invoicing` |
